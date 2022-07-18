@@ -1,7 +1,7 @@
 # JavaScript - Random Password Generator
 
 ## Description
-The purpose of this application is to generate random passwords of user specified length and character types. This application was built to apply some of the fundamental concepts concpets of JavaScript programming language.
+The purpose of this application is to generate random passwords of user specified length and character types. This application was built to apply some of the fundamental concepts of JavaScript programming language.
 
 ## How to use the app
 To generate the random password click the "Generate Password" button
