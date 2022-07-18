@@ -1,5 +1,48 @@
 // Assignment code here
 
+// Password object - contains password criterias and character sets used to make a password
+var passwordCriteria = {
+  length: 12, // default password length
+  useLowercase: true, // default setting to use lowercase characters
+  useUppercase: true, // deafult setting to use uppercase characters
+  useNumeric: true, // deafult setting to use numeric characters
+  useSpecialCharacters: true, // deafult setting to use special characters
+  // English lowercase characters
+  lowercaseCharacterSet: "abcdefghijklmnopqrstuvwxyz",
+  // Decimal numeric characters
+  numericCharacterSet: "0123456789",
+  // Special password characters from "https://owasp.org/www-community/password-special-characters"
+  specialCharacterSet: " !\"#$%&'()*+,-./:;<=>?@[]^_`{|}~",
+  /*
+    getCharacterSet() method creates a concatenated string of characters stored in the lowercaseCharacterSet, uppercaseCharacterSet, numericCharacterSet and 
+    specialCharacter set if the use said yes to using that particular character set.
+  */
+  getCharacterSet: function () {
+    var characterSet = "";
+
+    if (this.useLowercase) {
+      characterSet += this.lowercaseCharacterSet;
+    }
+
+    if (this.useUppercase) {
+      characterSet += this.lowercaseCharacterSet.toUpperCase();
+    }
+
+    if (this.useNumeric) {
+      characterSet += this.numericCharacterSet;
+    }
+
+    if (this.useSpecialCharacters) {
+      characterSet += this.specialCharacterSet;
+    }
+
+    return characterSet;
+  },
+};
+
+// inputValidator() - runs a while loop until the user enters the allowed values in the prompt
+
+// generatePassword() - generates the password based on the user selected criterias
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -10,7 +53,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
