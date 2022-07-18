@@ -7,12 +7,10 @@ var passwordCriteria = {
   useUppercase: true, // deafult setting to use uppercase characters
   useNumeric: true, // deafult setting to use numeric characters
   useSpecialCharacters: true, // deafult setting to use special characters
-  // English lowercase characters
-  lowercaseCharacterSet: "abcdefghijklmnopqrstuvwxyz",
-  // Decimal numeric characters
-  numericCharacterSet: "0123456789",
-  // Special password characters from "https://owasp.org/www-community/password-special-characters"
-  specialCharacterSet: " !\"#$%&'()*+,-./:;<=>?@[]^_`{|}~",
+  lowercaseCharacterSet: "abcdefghijklmnopqrstuvwxyz", // English lowercase characters
+  numericCharacterSet: "0123456789", // Decimal numeric characters
+  specialCharacterSet: " !\"#$%&'()*+,-./:;<=>?@[]^_`{|}~", // Special password characters from "https://owasp.org/www-community/password-special-characters"
+
   /*
     getCharacterSet() method creates a concatenated string of characters stored in the lowercaseCharacterSet, uppercaseCharacterSet, numericCharacterSet and 
     specialCharacter set if the use said yes to using that particular character set.
